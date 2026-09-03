@@ -1,0 +1,39 @@
+{
+  "name": "genpark-split-shipment-warehouse-distance-minimizer-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-node 3PL fulfillment warehouse distance optimizer minimizing split-shipments, transit miles, and carbon footprint.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "genpark",
+  "category": "merchant-commerce",
+  "tags": [
+    "flexport",
+    "shipbob",
+    "split-shipment",
+    "fulfillment-routing",
+    "supply-chain"
+  ],
+  "inputs": {
+    "destination_zip": {
+      "type": "string"
+    },
+    "order_skus": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "routing_plan_id": {
+      "type": "string"
+    },
+    "assigned_warehouse": {
+      "type": "string"
+    },
+    "transit_distance_miles": {
+      "type": "number"
+    },
+    "manifest_dispatch_url": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
